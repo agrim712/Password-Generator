@@ -1,0 +1,214 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(231deg, rgba(22,6,40,1) 0%,rgba(52,28,79,1) 50%, rgba(88,7,125,1) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+h2{
+    color:white;
+    opacity: 75%;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+.display-container
+{
+    position: relative;
+    background-color: hsl(268, 75%, 9%);
+    border-radius: 1rem;
+    border-bottom: solid 0.35rem hsl(281, 89%, 26%);
+    margin:1rem 0;
+    padding: 0.35rem;
+}
+.container
+{
+    width:90%;
+    max-width: 350px;
+}
+.display::placeholder
+{
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    opacity: 0.65;
+    color: hsl(52, 100%, 62%);
+    transform: translateY(-50%);
+    
+}
+.display
+{
+    color:hsl(52, 100%, 62%);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    opacity: 0.65;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    font-size: 1.5rem;
+    left: 1.5rem;
+    line-height: 30px;
+    padding-right: 3.5rem;
+
+}
+
+
+.display-container button{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+.input-container
+{
+    width:100%;
+    background-color: hsl(268, 75%, 9%);
+    border-radius:1rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.75;
+    color: hsl(0, 0%, 100%);
+    opacity: 90%;
+    padding: 10px;
+    border-bottom:solid 0.35rem hsl(281, 89%, 26%)
+}
+.para {
+    float: left;
+    padding-right: 30px;
+    font-size:1.2rem;
+}
+.hi
+{
+    float: right;
+    color:hsl(52, 100%, 62%);
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding-left: 30px;
+}
+.length-container
+{
+    margin-bottom: 3px;
+}
+.copyBtn{
+    background-color: transparent;
+    border: none;
+    outline:none;
+    cursor: pointer;
+}
+.tooltip{
+    position: absolute;
+    background-color: hsl(285, 91%, 52%);
+    color:hsl(52, 100%, 62%);
+    top: -25px;
+    left: -15px;
+    padding: 3px 6px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin:bottom;
+    transition: all 250ms ease-in-out;
+}
+.tooltip.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.slide
+{
+    margin-top: 3px;
+    margin-bottom: 10px;
+    appearance: none;
+    cursor: pointer;
+    /* background-color: hsl(268, 47%, 21%); */
+    border-radius: 1rem;
+    background-image: linear-gradient(hsl(285, 91%, 52%),hsl(285, 91%, 52%));
+    height:0.95rem;
+    z-index:-1;
+}
+.slide::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    border: solid 2px hsl(52, 100%, 62%);
+    height: 35px;
+    cursor: pointer;
+    width: 35px;
+    border-radius: 50%;
+    background-color: hsl(52, 100%, 62%);
+    box-shadow: 0px 0px 20px 0px rgba(255,229,61,0.50);
+    transition: all 100ms ease-in;
+}
+.slide:active{
+    outline: 2px solid hsl(52, 100%, 62%);
+}
+.slide::-webkit-slider-thumb:hover{
+    /* outline: 1px solid hsl(52, 100%, 62%); */
+    background-color: hsl(268, 75%, 9%);
+    box-shadow: 0px 0px 25px 5px rgba(255,299,61,0.8);
+}
+.strength-container
+{
+    margin-top: 10px;
+}
+.strength-container p{
+    float: left;
+    margin-bottom: 30px;
+}
+.circle
+{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    float:right;
+}
+.generate-container{
+    color:hsl(52, 100%, 62%);
+    background-color: hsl(285, 91%, 52%);
+    padding: 10px;
+    width: 100%;
+    border-radius: 0.75rem;
+    border:none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: solid 0.35rem hsl(52, 100%, 62%)
+}
+.check{
+    appearance: none;
+    border-radius: 5px;
+    border:solid 1px hsl(176, 100%, 44%);;
+    height: 18px;
+    width: 18px;
+    transform: translateY(20%);
+    position: relative;
+    cursor: pointer
+}
+.check:checked{
+    background-color: hsl(176, 100%, 44%);
+}
+.check:checked::before{
+    content:'✔';
+    position: absolute;
+    font-size: 1.4;
+    color: hsl(198, 20%, 13%);
+    padding-bottom: 3px;
+    transform: translateY(-26%);
+    transform: translateX(30%);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head><title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Password Generator</h2>
+            <div class = "display-container">
+                <input readonly placeholder="PASSWORD" class = "display" data-passwordDisplay> 
+                <button class="copyBtn" data-copy>
+                    <span class="tooltip" data-copyMsg></span>
+                    <img src="copy.svg" alt="copy" title="copy" width="25" height="20">
+                </button>
+            </div>
+            <div class = "input-container">
+                <div class="length-container">
+                    <p class="para">Password Length</p>
+                    <p class="hi" data-lengthNumber>10</p>
+                </div>
+                <input type="range" min="0" max="20" class="slide" step="1" data-lengthSlider>
+            <div>
+                <input type="checkbox" id="uppercase" class="check">
+                <label for="uppercase">Includes Uppercase</label><br>
+                <input type="checkbox" id="lowercase" class="check">
+                <label for="lowercase">Includes Lowercase</label><br>
+                <input type="checkbox" id="symbols" class="check">
+                <label for="symbols">Includes Symbols</label><br>
+                <input type="checkbox" id="numbers" class="check">
+                <label for="numbers">Includes Numbers</label>
+            </div>
+            <div class="strength-container">
+                <p>Strength</p>
+                <div class="circle" data-indicator></div>
+                <button class = "generate-container">Generate Password</button>
+            </div>
+            </div>
+        </div>
+        <script src="code.js"></script>
+    </body>
+</html>
